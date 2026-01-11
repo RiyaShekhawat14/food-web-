@@ -1,55 +1,140 @@
-# Food Website
+# 🍔 Food Delivery Web Application (Frontend)
 
-Simple React + Vite food ordering UI.
+This project is a **responsive food delivery web application frontend**, inspired by popular platforms like Zomato.  
+It focuses on **modern UI design, component-based architecture, and smooth user experience** using frontend technologies.
 
-## Quick start
+---
 
-Requirements: Node.js (16+), Git
+## 📌 Project Overview
 
-Install:
-```bash
+The Food Web Application provides a visually appealing interface where users can:
+- Browse food items
+- View restaurant-style layouts
+- Explore categories and offers
+- Experience a real-world food delivery UI
+
+This project is built to strengthen **frontend development skills** and understand how real food delivery platforms structure their UI.
+
+---
+
+## 🎯 Objectives
+
+- To design a clean and responsive food delivery UI
+- To practice frontend development concepts
+- To improve skills in layout design, styling, and component reuse
+- To simulate a real-world food ordering platform interface
+
+---
+
+## 🛠️ Technologies Used
+
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **React.js**
+- **Vite**
+- **VS Code**
+- **Git & GitHub**
+
+---
+
+## ✨ Features
+
+- Responsive design for different screen sizes
+- Food cards with images and descriptions
+- Category-based food sections
+- Clean and modern UI
+- Reusable React components
+- Smooth navigation and layout structure
+
+---
+
+## 📂 Project Structure
+food-web/
+│── src/
+│ │── components/
+│ │── pages/
+│ │── assets/
+│── public/
+│── index.html
+│── package.json
+│── README.md
+
+
+
+
+---
+
+## ▶️ How to Run the Project Locally
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/food-web.git
+
+2.Navigate to the project directory:
+
+cd food-web
+
+
+3.Install dependencies:
+
 npm install
-```
 
-Run dev server:
-```bash
+
+4.Start the development server:
+
 npm run dev
-```
 
-Build for production:
-```bash
-npm run build
-```
 
-Preview the production build:
-```bash
-npm run preview
-```
+5.Open the browser and visit:
 
-## Important notes
+http://localhost:5173
 
-- Key files:
-  - App entry: [`src/main.jsx`](src/main.jsx)
-  - Navbar: [`src/components/Navbar/Navbar.jsx`](src/components/Navbar/Navbar.jsx)
-  - Store context: [`src/context/storecontext.jsx`](src/context/storecontext.jsx)
 
-- Vercel (and most CI) run on Linux, which has a case-sensitive filesystem. If imports and file/folder names differ only by letter case (for example `./Context/StoreContext.jsx` vs `./context/storecontext.jsx`) your app will work locally on Windows but fail on Vercel with "Module not found". Fix by making import paths and filenames match exactly.
+⚙️ Development Practices Followed
 
-Recommended safe rename (case-only on Windows):
-```bash
-# use a temporary name to change case reliably
-git mv src/context/storecontext.jsx src/context/_tmp_StoreContext.jsx
-git mv src/context/_tmp_StoreContext.jsx src/Context/StoreContext.jsx
+Component reusability
 
-# or update imports to use the existing lowercase path
-# then commit
-git add -A
-git commit -m "Fix: normalize case for StoreContext import/path"
-git push
-```
+Clean folder structure
 
-To reproduce the deployment error locally, run `npm run build` in WSL or a case-sensitive environment.
+Separation of concerns
 
-## Contributing
+Responsive design principles
 
-Open an issue or submit a PR. Keep file and import casing consistent.
+Version control using Git
+
+Deployment using CI/CD workflow
+
+📈 Performance & Optimization
+
+Fast build using Vite
+
+Optimized asset loading
+
+Minimal bundle size
+
+Responsive images and layouts
+
+🚀 Future Enhancements
+
+Backend integration (Node.js / Flask)
+
+User authentication (Login / Signup)
+
+Cart & order management system
+
+Payment gateway integration
+
+API-based dynamic food data
+
+Admin dashboard for food management
+
+👩‍💻 Author
+
+Riya Shekhawat
+Bachelor of Engineering – Artificial Intelligence & Data Science
+MBM University, Jodhpur
+
+
+
+
