@@ -1,140 +1,108 @@
-# 🍔 Food Delivery Web Application (Frontend)
+# Food Website Full Stack App
 
-This project is a **responsive food delivery web application frontend**, inspired by popular platforms like Zomato.  
-It focuses on **modern UI design, component-based architecture, and smooth user experience** using frontend technologies.
+This project started as a frontend food ordering UI and is now a full stack application with:
 
----
+- `frontend/` for the React + Vite client
+- `backend/` for the FastAPI API
+- Supabase Postgres for persistent data
+- demo checkout support for free college-project payment flow
 
-## 📌 Project Overview
+## Ports
 
-The Food Web Application provides a visually appealing interface where users can:
-- Browse food items
-- View restaurant-style layouts
-- Explore categories and offers
-- Experience a real-world food delivery UI
+- Frontend: `http://127.0.0.1:5173`
+- Backend: `http://127.0.0.1:8000`
 
-This project is built to strengthen **frontend development skills** and understand how real food delivery platforms structure their UI.
+## Features
 
----
+- Responsive food ordering UI
+- Login and signup with JWT authentication
+- Database-backed products, cart, and orders
+- Demo payment gateway flow
+- Order history page backed by the database
 
-## 🎯 Objectives
+## Run locally
 
-- To design a clean and responsive food delivery UI
-- To practice frontend development concepts
-- To improve skills in layout design, styling, and component reuse
-- To simulate a real-world food ordering platform interface
-
----
-
-## 🛠️ Technologies Used
-
-- **HTML5**
-- **CSS3**
-- **JavaScript**
-- **React.js**
-- **Vite**
-- **VS Code**
-- **Git & GitHub**
-
----
-
-## ✨ Features
-
-- Responsive design for different screen sizes
-- Food cards with images and descriptions
-- Category-based food sections
-- Clean and modern UI
-- Reusable React components
-- Smooth navigation and layout structure
-
----
-
-## 📂 Project Structure
-food-web/
-│── src/
-│ │── components/
-│ │── pages/
-│ │── assets/
-│── public/
-│── index.html
-│── package.json
-│── README.md
-
-
-
-
----
-
-## ▶️ How to Run the Project Locally
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/food-web.git
-
-2.Navigate to the project directory:
-
-cd food-web
-
-
-3.Install dependencies:
-
+1. Frontend setup:
+```bash
+cd frontend
 npm install
-
-
-4.Start the development server:
-
+copy .env.example .env
 npm run dev
+```
 
+2. Backend setup:
+```bash
+cd backend
+copy .env.example .env
+..\.venv\Scripts\python.exe -m pip install -r requirements.txt
+..\.venv\Scripts\python.exe run.py
+```
 
-5.Open the browser and visit:
+PowerShell-safe backend commands:
+```powershell
+cd c:\Users\hp\OneDrive\Desktop\food-web\food-website\backend
+copy .env.example .env
+& ..\.venv\Scripts\python.exe -m pip install -r .\requirements.txt
+& ..\.venv\Scripts\python.exe .\run.py
+```
 
-http://localhost:5173
+If `.venv` does not exist yet, create it once from the repo root:
+```powershell
+cd c:\Users\hp\OneDrive\Desktop\food-web\food-website
+py -3.13 -m venv .venv
+& .\.venv\Scripts\python.exe -m pip install --upgrade pip
+```
 
+## Architecture
 
-⚙️ Development Practices Followed
+### Frontend
 
-Component reusability
+- Entry point: `frontend/src/main.jsx`
+- App shell and routes: `frontend/src/App.jsx`
+- API-backed app state: `frontend/src/Context/StoreContext.jsx`
+- API base URL config: `frontend/src/config/api.js`
+- Fetch helper: `frontend/src/services/api.js`
 
-Clean folder structure
+### Backend
 
-Separation of concerns
+- API bootstrap: `backend/main.py`
+- Local run entry: `backend/run.py`
+- Settings: `backend/app/core/config.py`
+- Auth/security helpers: `backend/app/core/security.py`
+- Database/session setup: `backend/app/db/session.py`
+- Route layer: `backend/app/routers/`
+- Business logic layer: `backend/app/services/`
+- Database models: `backend/app/models/`
+- Request/response schemas: `backend/app/schemas/`
 
-Responsive design principles
+## Environment
 
-Version control using Git
+Frontend:
 
-Deployment using CI/CD workflow
+```env
+VITE_API_BASE_URL=http://127.0.0.1:8000/api
+```
 
-📈 Performance & Optimization
+Backend:
 
-Fast build using Vite
+```env
+SECRET_KEY=your-secret
+JWT_ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=4320
+DATABASE_PATH=
+DATABASE_URL=your-database-url
+FRONTEND_BASE_URL=http://127.0.0.1:5173
+ALLOWED_ORIGINS=http://localhost:5173,http://127.0.0.1:5173
+PAYMENT_PROVIDER=demo
+STRIPE_SECRET_KEY=
+STRIPE_PUBLISHABLE_KEY=
+CURRENCY=usd
+DELIVERY_FEE=2
+```
 
-Optimized asset loading
+## Notes
 
-Minimal bundle size
-
-Responsive images and layouts
-
-🚀 Future Enhancements
-
-Backend integration (Node.js / Flask)
-
-User authentication (Login / Signup)
-
-Cart & order management system
-
-Payment gateway integration
-
-API-based dynamic food data
-
-Admin dashboard for food management
-
-👩‍💻 Author
-
-Riya Shekhawat
-Bachelor of Engineering – Artificial Intelligence & Data Science
-MBM University, Jodhpur
-
-
-
-
+- The backend seeds the food catalog on first startup.
+- Demo payment mode is free and suitable for a college project.
+- Supabase can be used through `DATABASE_URL`.
+- `.env` files are ignored from git.
